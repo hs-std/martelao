@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://UI/Button-Menu.gd" type="Script" id=1]
+[ext_resource path="res://Theme/UI-Button-theme.tres" type="Theme" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.97, 0.87106, 0.4753, 1 )
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.5088, 0.144, 1 )
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.968627, 0.819608, 0.235294, 1 )
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.968627, 0.819608, 0.235294, 0 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 14
+
+[node name="Button" type="Button"]
+margin_right = 12.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 400, 100 )
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_right = -5.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Panel2" type="Panel" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="Panel3" type="Panel" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 19.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="Panel4" type="Panel" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 14.0
+margin_bottom = -14.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -51.0
+margin_right = 500.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( 500, 51 )
+text = "Jogarjggkjg,sgljgajgfjagdfjajdfgaljdgfajgfhjadg"
+align = 1
+valign = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 4 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Button_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_Button_pressed"]

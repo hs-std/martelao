@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Game/Hammer/Game/Hammer-Game.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/World.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game/Game.gd" type="Script" id=4]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="World" parent="." instance=ExtResource( 2 )]
+
+[node name="Hammer-Game" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1914, 748 )
+scale = Vector2( 1.43097, 1.43097 )
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = -48.0
+margin_top = -24.0
+margin_right = 1976.0
+margin_bottom = 1122.0
+color = Color( 0, 0, 0, 0.713726 )
+
+[connection signal="end" from="HUD" to="." method="_on_HUD_end"]

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Game/Hammer/Selec/Cable.gd" type="Script" id=1]
+[ext_resource path="res://Game/Hammer/Selec/Hammer1-1.png" type="Texture" id=2]
+[ext_resource path="res://Game/Hammer/Game/Hammer1-1.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+cable = ExtResource( 2 )
+cable_game = ExtResource( 3 )
+time_in = 0.3
+time_out = 0.3
+time_cooldown = 0.3
+hammer_force = 1.0
+name = "Cabo Básico"
+about = "Só faz isso"
+id = 0

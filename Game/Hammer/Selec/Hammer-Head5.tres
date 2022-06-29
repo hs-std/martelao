@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Game/Hammer/Selec/Head.gd" type="Script" id=1]
+[ext_resource path="res://Game/Hammer/Selec/Hammer5.png" type="Texture" id=2]
+[ext_resource path="res://Game/Hammer/Game/Hammer5.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+head = ExtResource( 2 )
+head_game = ExtResource( 3 )
+time_in = 0.5
+time_out = 0.5
+time_cooldown = 0.0
+hammer_force = 0.0
+name = "Marcelo"
+about = "Todos temem o poder de Marcelo"
+id = 4

@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Game/Hammer/Game/Hammer-Game.gd" type="Script" id=1]
+[ext_resource path="res://Game/Hammer/Game/Hammer1-1.png" type="Texture" id=2]
+[ext_resource path="res://Game/Hammer/Game/Hammer1-2.png" type="Texture" id=3]
+[ext_resource path="res://Game/Hammer/Game/Aim.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24.3155, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 46.1902, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 57.8037, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 65.239, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 97.1352, 10 )
+
+[node name="Hammer-Game" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -101.0 ],
+"_edit_vertical_guides_": [ -649.0 ]
+}
+
+[node name="Hemmer" type="Node2D" parent="."]
+position = Vector2( 100, -54 )
+
+[node name="Node2D" type="Node2D" parent="Hemmer"]
+position = Vector2( -312, -172 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Cable" type="Sprite" parent="Hemmer/Node2D"]
+texture = ExtResource( 2 )
+
+[node name="Head" type="Sprite" parent="Hemmer/Node2D"]
+texture = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="Hemmer"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Hemmer" groups=["hammer"]]
+
+[node name="0" type="CollisionShape2D" parent="Hemmer/KinematicBody2D"]
+position = Vector2( -489, -235 )
+rotation = 0.870628
+shape = SubResource( 1 )
+
+[node name="1" type="CollisionShape2D" parent="Hemmer/KinematicBody2D"]
+position = Vector2( -510.53, -185.923 )
+rotation = 0.870628
+shape = SubResource( 5 )
+
+[node name="2" type="CollisionShape2D" parent="Hemmer/KinematicBody2D"]
+position = Vector2( -542.566, -203.325 )
+rotation = 1.03558
+shape = SubResource( 3 )
+
+[node name="3" type="CollisionShape2D" parent="Hemmer/KinematicBody2D"]
+position = Vector2( -512, -188 )
+rotation = 0.836614
+shape = SubResource( 2 )
+
+[node name="4" type="CollisionShape2D" parent="Hemmer/KinematicBody2D"]
+position = Vector2( -486.378, -161.313 )
+rotation = 0.901931
+scale = Vector2( 1, 1 )
+shape = SubResource( 4 )
+
+[node name="Aim" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Aim"]
+position = Vector2( -446, -90 )
+scale = Vector2( 0.195502, 0.195502 )
+texture = ExtResource( 4 )

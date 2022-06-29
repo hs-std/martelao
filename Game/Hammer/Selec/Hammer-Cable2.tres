@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Game/Hammer/Selec/Cable.gd" type="Script" id=1]
+[ext_resource path="res://Game/Hammer/Game/Hammer2-1.png" type="Texture" id=2]
+[ext_resource path="res://Game/Hammer/Selec/Hammer2-1.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+cable = ExtResource( 3 )
+cable_game = ExtResource( 2 )
+time_in = 0.2
+time_out = 0.2
+time_cooldown = 0.2
+hammer_force = 3.0
+name = "Cabo Magalu"
+about = "Foi comprado lá"
+id = 1

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hammer.mp3-dde59a03639d932ad166941dce2b8223.mp3str"
+
+[deps]
+
+source_file="res://Audios/Hammer.mp3"
+dest_files=[ "res://.import/Hammer.mp3-dde59a03639d932ad166941dce2b8223.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

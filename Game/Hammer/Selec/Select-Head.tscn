@@ -1,0 +1,33 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Game/Hammer/Selec/Hammer1-2.png" type="Texture" id=1]
+[ext_resource path="res://Game/Hammer/Selec/Select-Head.gd" type="Script" id=2]
+[ext_resource path="res://Game/Hammer/Selec/Hammer-Head1.tres" type="Resource" id=3]
+[ext_resource path="res://Game/Hammer/Selec/Hammer-Head2.tres" type="Resource" id=4]
+[ext_resource path="res://UI/Select-Lock.png" type="Texture" id=5]
+[ext_resource path="res://Game/Hammer/Selec/Hammer-Head5.tres" type="Resource" id=6]
+[ext_resource path="res://Game/Hammer/Selec/Hammer-Head4.tres" type="Resource" id=7]
+[ext_resource path="res://Game/Hammer/Selec/Hammer-Head3.tres" type="Resource" id=8]
+
+[node name="Head" type="TextureRect"]
+margin_left = 610.0
+margin_right = 1210.0
+margin_bottom = 876.0
+texture = ExtResource( 1 )
+stretch_mode = 6
+script = ExtResource( 2 )
+res_head = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ) ]
+
+[node name="Lock" type="TextureRect" parent="."]
+modulate = Color( 0.968627, 0.819608, 0.235294, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -204.0
+margin_top = -468.0
+margin_right = 196.0
+margin_bottom = 44.0
+rect_scale = Vector2( 0.123883, 0.123883 )
+rect_pivot_offset = Vector2( 200, 256 )
+texture = ExtResource( 5 )
