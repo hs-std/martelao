@@ -15,3 +15,4 @@ hammer_force = 3.0
 name = "Cabo Magalu"
 about = "Foi comprado lá"
 id = 1
+lock = true

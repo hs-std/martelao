@@ -9,30 +9,48 @@ onready var margin = get_node("Node")
 func _ready():
 	_desbloc_c()
 	_desbloc_h()
-	_move()
+	
 	pass
 	
 func _desbloc_c():
-	if Global.id_c == 1:
+	if Global.id_c == 1 and itens[0].lock:
 		tex.texture = itens[0].cable
 		text.text = "Você desbloqueou o " + itens[0].name
-	if Global.id_c == 2:
+		itens[0].lock = false
+		_move()
+		
+	if Global.id_c == 2 and itens[1].lock:
 		tex.texture = itens[1].cable
 		text.text = "Você desbloqueou o " + itens[1].name
+		itens[1].lock = false
+		_move()
+	Global.id_c = 0
 		
 func _desbloc_h():
-	if Global.id_h == 1:
+	if Global.id_h == 1 and itens[2].lock:
 		tex.texture = itens[2].head
 		text.text = "Você desbloqueou o " + itens[2].name
-	if Global.id_h == 2:
+		itens[2].lock = false
+		_move()
+		
+	if Global.id_h == 2 and itens[3].lock:
 		tex.texture = itens[3].head
 		text.text = "Você desbloqueou o " + itens[3].name
-	if Global.id_h == 3:
+		itens[3].lock = false
+		_move()
+		
+	if Global.id_h == 3 and itens[4].lock:
 		tex.texture = itens[4].head
 		text.text = "Você desbloqueou o " + itens[4].name
-	if Global.id_h == 4:
+		itens[4].lock = false
+		_move()
+		
+	if Global.id_h == 4 and itens[5].lock:
 		tex.texture = itens[5].head
 		text.text = "Você desbloqueou o " + itens[5].name
+		itens[5].lock = false
+		_move()
+	Global.id_h = 0
 		
 func _move():
 	tween.interpolate_property(margin,"position",Vector2(1266,1095),Vector2(1266,772),1,Tween.TRANS_LINEAR,Tween.EASE_IN)

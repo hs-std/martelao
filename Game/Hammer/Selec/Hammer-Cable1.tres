@@ -15,3 +15,4 @@ hammer_force = 1.0
 name = "Cabo Básico"
 about = "Só faz isso"
 id = 0
+lock = false

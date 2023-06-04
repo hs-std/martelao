@@ -15,3 +15,4 @@ hammer_force = 0.0
 name = "Marcelo"
 about = "Todos temem o poder de Marcelo"
 id = 4
+lock = true

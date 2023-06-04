@@ -15,3 +15,4 @@ hammer_force = 1.0
 name = "Martelo Saiyajin"
 about = "Seu poder é mais de 8 mil"
 id = 1
+lock = true

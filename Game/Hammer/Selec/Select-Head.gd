@@ -50,7 +50,7 @@ func _on_CableArrowLeft_pressed():
 
 
 func _block():
-	if Global.id_h >= res_head[ctrl].id:
+	if !res_head[ctrl].lock:
 		lock.hide()
 		Global.block_h = false
 	else:

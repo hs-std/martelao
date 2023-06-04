@@ -26,17 +26,19 @@ func _ready():
 		queue_free()
 
 func _on_body_entered(body):
-	if body.is_in_group("hammer"):
-		img.texture = head
-		emit_signal("hammer", bonus)
-		col.disabled = true
-		if type == list.Aim or type == list.Velocity:
-			emit_signal("especial_hammer")
-			if type == list.Aim:
-				Global.esp_aim = true
-			if type == list.Velocity:
-				Global.esp_vel = true
-		
+	if body.is_in_group("hammer") and Global.can_pot:
+		if body.get_parent().get_parent().can_hit():
+			body.get_parent().get_parent().mar = 1
+			img.texture = head
+			emit_signal("hammer", bonus)
+			col.disabled = true
+			if type == list.Aim or type == list.Velocity:
+				emit_signal("especial_hammer")
+				if type == list.Aim:
+					Global.esp_aim = true
+				if type == list.Velocity:
+					Global.esp_vel = true
+			
 
 	
 

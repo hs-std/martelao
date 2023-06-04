@@ -15,3 +15,4 @@ hammer_force = 0.0
 name = "Verde brabo"
 about = "Poder: ele é verde"
 id = 3
+lock = true

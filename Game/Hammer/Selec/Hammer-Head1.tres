@@ -15,3 +15,4 @@ hammer_force = 0.0
 name = "Martelo de pedreiro"
 about = "Só tem 7mil na conta"
 id = 0
+lock = false

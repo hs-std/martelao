@@ -14,3 +14,5 @@ onready var esp_vel = false
 # Referentes aos pontos
 onready var record = 0
 onready var points = 0
+
+onready var can_pot : bool = false

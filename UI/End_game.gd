@@ -21,3 +21,4 @@ func _score():
 	else:
 		result.text = "Seus Pontos:\n" + str(Global.points) + "\nSeu Redord:\n" + str(Global.record)
 		Global.points = 0
+

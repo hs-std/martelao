@@ -67,7 +67,6 @@ shape = SubResource( 2 )
 [node name="4" type="CollisionShape2D" parent="Hemmer/KinematicBody2D"]
 position = Vector2( -486.378, -161.313 )
 rotation = 0.901931
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="Aim" type="Node2D" parent="."]

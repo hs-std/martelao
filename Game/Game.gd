@@ -18,9 +18,9 @@ func _on_HUD_end():
 	get_tree().paused = true
 	self.add_child(end)
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
+#
 func on_hammer(_data):
-	HUD.more_time(5)
+	HUD.more_time(4)
 	HUD.more_points(10 + _data)
 	_point_popup()
 	

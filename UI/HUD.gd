@@ -38,7 +38,7 @@ func more_points(_data : int):
 
 func _on_Especial_timer_timeout():
 	if especial.value > 0:
-		especial.value -= 1
+		especial.value -= 4
 	else:
 		especial_timer.stop()
 

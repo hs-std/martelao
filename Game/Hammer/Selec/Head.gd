@@ -10,3 +10,4 @@ export (float) var hammer_force
 export (String) var name
 export (String) var about
 export (int) var id
+export (bool) var lock = true

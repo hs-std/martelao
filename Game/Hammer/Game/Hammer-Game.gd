@@ -17,6 +17,7 @@ var especial : float = 0
 var move = true
 var collision_ofc : CollisionShape2D
 var pos : Vector2
+onready var mar : int = 0
 
 
 func _ready():
@@ -32,8 +33,8 @@ func _ready():
 func _process(delta):
 	var _o = delta
 	self.position = self.get_global_mouse_position()
-	if hammer.rotation_degrees < -15:
-		collision_ofc.disabled = false
+#	if hammer.rotation_degrees < -15:
+#		collision_ofc.disabled = false
 #	else:
 #		collision_ofc.disabled = true
 	if Global.esp_vel:
@@ -48,22 +49,29 @@ func _process(delta):
 
 	
 func _input(event):
-	if event.is_action_pressed("Hammer"):
+	if event.is_action_pressed("Hammer") or event is InputEventScreenTouch or event is InputEventScreenDrag:
+		mar = 0
 		if !move:
 			return
 		move_in()
 
 	
 func move_in():
+	
 	move = false
 	tween.interpolate_property(hammer,"rotation_degrees",0,-16,time_in,Tween.TRANS_ELASTIC,Tween.EASE_IN)
 	tween.start()
 	yield(get_tree().create_timer(time_in),"timeout")
 	Audios.play_hammer()
+	Global.can_pot = true
+	collision_ofc.disabled = false
 	yield(get_tree().create_timer(time_cooldown),"timeout")
 	move_out()
-	collision_ofc.disabled = true
+#	collision_ofc.disabled = true
 func move_out():
+	collision_ofc.disabled = true
+
+	Global.can_pot = false
 	tween.interpolate_property(hammer,"rotation_degrees",-16,0,time_out,Tween.TRANS_LINEAR,Tween.EASE_IN)
 	tween.start()
 	yield(get_tree().create_timer(time_out),"timeout")
@@ -101,5 +109,11 @@ func _colision_data():
 		pos = Vector2(-415,-70)
 		
 func on_hammer(_data):
-	collision_ofc.disabled = true
-	print("Sumiu")
+#	collision_ofc.disabled = true
+	print("teste")
+
+func can_hit() -> bool:
+	if mar == 0:
+		return true
+	else:
+		return false

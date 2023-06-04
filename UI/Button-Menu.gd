@@ -28,4 +28,6 @@ func _on_Button_mouse_exited():
 func _on_Button_pressed():
 	cor.modulate = Color("#8b8b8b")
 	lab.modulate = Color("#8b8b8b")
-
+	yield(get_tree().create_timer(0.2),"timeout")
+	cor.modulate = Color("#ffffff")
+	lab.modulate = Color("#ffffff")

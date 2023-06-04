@@ -15,3 +15,4 @@ hammer_force = 0.0
 name = "Mjolnir"
 about = "Thor deixou vacilando"
 id = 2
+lock = true
