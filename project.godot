@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Achievement",
+"language": "GDScript",
+"path": "res://addons/google_play_game_services_manager/Achievement.gd"
+}, {
+"base": "Node",
+"class": "AndroidPluginClient",
+"language": "GDScript",
+"path": "res://addons/google_play_game_services_manager/AndroidPluginClient.gd"
+}, {
 "base": "Resource",
 "class": "Cable",
 "language": "GDScript",
@@ -20,6 +30,8 @@ _global_script_classes=[ {
 "path": "res://Game/Hammer/Selec/Head.gd"
 } ]
 _global_script_class_icons={
+"Achievement": "",
+"AndroidPluginClient": "",
 "Cable": "res://Game/Hammer/Game/Hammer1-1.png",
 "Head": "res://Game/Hammer/Game/Hammer1-2.png"
 }
